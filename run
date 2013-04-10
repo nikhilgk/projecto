@@ -1,0 +1,2 @@
+export DATABASE_URL='postgres://postgres:postgres@localhost/projecto'
+foreman start
