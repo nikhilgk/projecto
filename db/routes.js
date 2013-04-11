@@ -1,7 +1,7 @@
-var dbroutes = {};
+var routes = {};
 
 
-dbroutes.dbload = function(request, response) {
+routes.load = function(request, response) {
 	request.models.person.create([
 	    {
 	        name: "John",
@@ -22,11 +22,11 @@ dbroutes.dbload = function(request, response) {
 	response.send('Hello World! - Person Created');
 }
 
-dbroutes.dbhello = function(request, response) {
+routes.hello = function(request, response) {
 	request.models.person.find({surname: "Doe" }, 3, function (err, people) {
-	    response.write(people[0].name + " says : ");
+	    response.write(people[0].fullName() + " says : ");
 	    response.end('Hello World!');
 	});
 }
 
-module.exports = dbroutes;
+module.exports = routes;
