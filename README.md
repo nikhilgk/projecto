@@ -29,12 +29,12 @@ Install the heroku toolbelt for you OS
 	npm install
 
 ### Create a heoku app 
-
-heroku apps:create <projectname>
-heroku addons:add mongohq 
-heroku addons:add mongolab
-heroku addons:add heroku-postgresql
-heroku pg:promote HEROKU_POSTGRESQL_GREEN
-
-heroku config -a <projectname>
+	
+	heroku apps:create <projectname>
+	heroku addons:add mongohq 
+	heroku addons:add mongolab
+	heroku addons:add heroku-postgresql
+	heroku pg:promote HEROKU_POSTGRESQL_GREEN
+	
+	heroku config -a <projectname>
 
